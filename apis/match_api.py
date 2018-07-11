@@ -15,7 +15,7 @@ def get_future_matches():
         from models.odd import Odd
         odd = Odd.objects(wubai_id=m.wubai_id).get()
         from models.match import MatchResponse
-        match_response = MatchResponse(m.wubai_id, m.league, m.match_date, m.home_team, m.away_team, odd.rang)
+        match_response = MatchResponse(m.wubai_id, m.league, m.match_date, m.home_team, m.away_team, m.rang)
         if odd.profits:
             match_response.profits = odd.profits
         response.append(match_response.__dict__)
@@ -30,7 +30,7 @@ def get_match(wubai_id):
     from models.odd import Odd
     odd = Odd.objects(wubai_id=m.wubai_id).get()
     from models.match import MatchResponse
-    response = MatchResponse(m.wubai_id, m.league, m.match_date, m.home_team, m.away_team, odd.rang)
+    response = MatchResponse(m.wubai_id, m.league, m.match_date, m.home_team, m.away_team, m.rang)
     if odd.profits:
         response.profits = odd.profits
     if m.home_score:

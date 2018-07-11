@@ -5,12 +5,12 @@ class Match(db.Document):
     wubai_id = db.StringField(required=True, unique=True)
     league = db.StringField(required=True)
     match_date = db.DateTimeField(required=True)
-    created_date = db.DateTimeField()
     last_modified_date = db.DateTimeField()
     home_team = db.StringField(required=True)
     away_team = db.StringField(required=True)
     home_score = db.IntField()
     away_score = db.IntField()
+    rang = db.IntField(required=True)
     result = db.IntField()
     result_rang = db.IntField()
 
