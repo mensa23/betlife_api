@@ -1,1 +1,3 @@
 DATABASE_NAME = 'betlife'
+MP_APP_ID = 'wx5439a7d0ce29ba2e'
+MP_APP_SECRET = 'ce18a7b69ccc060440eec4017ee40f0e'
