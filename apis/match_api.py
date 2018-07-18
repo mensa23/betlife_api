@@ -24,7 +24,7 @@ def get_future_matches(hours):
 def get_history_matches(hours):
     now = datetime.utcnow()
     from models.match import Match
-    matches = Match.objects(match_date__lt=now, match_date__gte=now - timedelta(hours=hours)).order_by('match_date')
+    matches = Match.objects(match_date__lt=now, match_date__gte=now - timedelta(hours=hours)).order_by('-match_date')
     response = []
     for m in matches:
         match_date = m.match_date + timedelta(hours=8)

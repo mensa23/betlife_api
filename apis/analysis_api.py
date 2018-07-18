@@ -71,5 +71,8 @@ def get_accuracy(hours):
                 results.remove(0)
             if m.result_rang in results:
                 bingo += 1
-    response = {'bingo': round(bingo / matches.count() * 100, 1)}
+    if matches.count() > 0:
+        response = {'bingo': round(bingo / matches.count() * 100, 1)}
+    else:
+        response = {'bingo': 0}
     return jsonify(response)
