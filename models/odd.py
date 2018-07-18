@@ -11,3 +11,4 @@ class Odd(db.Document):
     odds = db.ListField(db.DictField())
     rangs = db.ListField(db.DictField())
     profits = db.ListField(db.DictField())
+    match_date = db.DateTimeField()
